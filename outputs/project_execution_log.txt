@@ -1,0 +1,92 @@
+==================================================
+ML Attendance Certification System
+==================================================
+Execution Started: 2026-06-14 23:56:49.113867
+
+
+==================================================
+Feature Engineering
+==================================================
+Loading Attendance Dataset...
+Dataset Loaded Successfully!
+Total Records: 39200
+
+Creating Student Summary...
+Calculating Consistency Score...
+Calculating Domain Participation...
+Calculating Engagement Score...
+
+Feature Engineering Completed Successfully!
+
+Total Students: 980
+
+Generated Features:
+
+1. Total_Sessions
+2. Sessions_Attended
+3. Average_Attendance_Minutes
+4. Attendance_Percentage
+5. Attendance_Std
+6. Consistency_Score
+7. Domain_Participation_Count
+8. Engagement_Score
+9. Certified
+
+
+Saved To:
+D:\ML_Attendance_Certification_System_MAIN\ML_Attendance_Certification_System_MAIN\data\processed\Student_Attendance_Summary.csv
+
+Sample Data:
+  Student_ID   Student_Name  ... Engagement_Score  Certified
+0     ST0001      Sai Reddy  ...            76.83          1
+1     ST0002    Rohit Gupta  ...            65.25          0
+2     ST0003   Harsha Kumar  ...            62.50          0
+3     ST0004  Praveen Gupta  ...            70.05          1
+4     ST0005    Varun Patel  ...            61.10          0
+
+[5 rows x 12 columns]
+
+==================================================
+Model Training
+==================================================
+All Models Saved Successfully
+
+==================================================
+Model Evaluation
+==================================================
+
+ERROR:
+Traceback (most recent call last):
+  File "D:\ML_Attendance_Certification_System_MAIN\ML_Attendance_Certification_System_MAIN\src\evaluate_model.py", line 16, in <module>
+    import seaborn as sns
+ModuleNotFoundError: No module named 'seaborn'
+
+==================================================
+Certification Generation
+==================================================
+Loading Student Attendance Dataset...
+Dataset Loaded Successfully!
+Total Students : 980
+
+Loading Random Forest Model...
+Random Forest Model Loaded Successfully!
+
+Predicting Certification Eligibility...
+Prediction Completed!
+
+========== FINAL REPORT ==========
+   Total_Students  ...  Certification_Rate (%)
+0             980  ...                    60.2
+
+[1 rows x 4 columns]
+
+Files Generated Successfully:
+
+D:\ML_Attendance_Certification_System_MAIN\ML_Attendance_Certification_System_MAIN\outputs\certified_students.csv
+D:\ML_Attendance_Certification_System_MAIN\ML_Attendance_Certification_System_MAIN\outputs\uncertified_students.csv
+D:\ML_Attendance_Certification_System_MAIN\ML_Attendance_Certification_System_MAIN\outputs\final_certification_report.csv
+
+ML-Based Certification Process Completed!
+
+Execution Completed: 2026-06-14 23:57:01.984632
+Total Duration: 0:00:12.870765
